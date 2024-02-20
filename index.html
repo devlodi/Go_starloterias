@@ -1,0 +1,253 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <meta charset="UTF-8">
+        <title>STAR LOTERIAS</title>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #131313; /* Cor de fundo mais escura */
+    color: #c5c6c7; /* Texto em cor cinza claro para contraste */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+Para dar um tema "dark" ou "escuro" à sua página, você pode ajustar o esquema de cores do fundo e dos elementos para tons mais escuros, o que é agradável para visualização noturna e geralmente preferido para temas relacionados ao espaço ou à noite. Você também pode ajustar as cores dos botões das loterias para corresponder às cores associadas a cada uma delas.
+
+Segue um exemplo de como você pode alterar seu CSS para um tema dark:
+
+css
+Copy code
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #131313; /* Cor de fundo mais escura */
+    color: #c5c6c7; /* Texto em cor cinza claro para contraste */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#header {
+    background: url('https://c.pxhere.com/photos/1a/9d/stars_background_blue_photoshop_color_space_sky_dark-610854.jpg!d') no-repeat center center;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Overlay escuro para garantir a legibilidade do texto */
+    z-index: -1;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+#slogan {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    font-style: italic;
+}
+
+
+    .btn-telegram {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #0088cc !important; /* Adiciona !important para garantir a cor do Telegram */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    margin-top: 10px;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    width: 100%; /* Ajuste para ocupar a largura total da div da loteria */
+    transition: background-color 0.3s;
+}
+
+.btn-telegram:hover {
+    background-color: #0077b5 !important; /* Adiciona !important para garantir a cor do hover */
+}
+
+
+
+
+    .loteria {
+            text-align: center; /* Isso centraliza o conteúdo dentro da div .loteria */
+
+        margin: 10px 5px;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+           background-color: #1c1f22; /* Cor de fundo dos elementos da loteria */
+
+    }
+
+    .loteria h2 {
+         color: #fff;
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .loteria button {
+         display: inline-block; /* Muda display para inline-block */
+    margin: 5px auto; /* Define as margens superior e inferior e centraliza horizontalmente */
+        padding: 12px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        width: calc(100% - 24px); /* Subtrai o padding para obter a largura total */
+        margin: 5px 0;
+        display: block; /* Garante que os botões ocupem a linha inteira */
+    }
+
+.mega-sena button { background-color: #17a2b8; } /* Cor aproximada para Mega-Sena */
+.quina button { background-color: #6f42c1; } /* Cor aproximada para Quina */
+.lotofacil button { background-color: #28a745; } /* Cor aproximada para Lotofácil */
+.lotomania button { background-color: #fd7e14; } /* Cor aproximada para Lotomania */
+.duplasena button { background-color: #dc3545; } /* Cor aproximada para Dupla Sena */
+.timemania button { background-color: #20c997; } /* Cor aproximada para Timemania */
+.diadesorte button { background-color: #ffc107; } /* Cor aproximada para Dia de Sorte */
+
+
+    .palpite {
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    /* Ajustes específicos para dispositivos móveis */
+    @media (max-width: 600px) {
+        #header h1 {
+            font-size: 22px;
+        }
+
+        .loteria {
+            margin: 10px;
+        }
+
+        .loteria h2 {
+            font-size: 18px;
+             color: #fff;
+        }
+
+        .loteria button {
+            font-size: 14px;
+            padding: 10px;
+             display: inline-block; /* Muda display para inline-block */
+    margin: 5px auto; /* Define as margens superior e inferior e centraliza horizontalmente */
+        }
+
+        .palpite {
+            font-size: 14px;
+        }
+    }
+
+
+
+    </style>
+
+    </head>
+    <body>
+
+       <div id="header">
+    <h1>STAR LOTERIAS</h1>
+    <p id="slogan">Seus sonhos nas estrelas</p> <!-- Adiciona o slogan aqui -->
+        </div>
+
+
+        <!-- Loterias -->
+    <!-- Loterias -->
+    <div id="mega-sena" class="loteria mega-sena">
+        <h2>Mega-Sena</h2>
+        <button onclick="gerarPalpite('mega-sena', 6, 60)">Gerar Palpite</button>
+        <p class="palpite"></p>
+    </div>
+
+    <div id="quina" class="loteria quina">
+        <h2>Quina</h2>
+        <button onclick="gerarPalpite('quina', 5, 80)">Gerar Palpite</button>
+        <p class="palpite"></p>
+    </div>
+
+    <div id="lotofacil" class="loteria lotofacil">
+        <h2>Lotofácil</h2>
+        <button onclick="gerarPalpite('lotofacil', 15, 25)">Gerar Palpite</button>
+        <p class="palpite"></p>
+    </div>
+
+    <div id="lotomania" class="loteria lotomania">
+        <h2>Lotomania</h2>
+        <button onclick="gerarPalpite('lotomania', 50, 100)">Gerar Palpite</button>
+        <p class="palpite"></p>
+    </div>
+
+    <div id="duplasena" class="loteria duplasena">
+        <h2>Dupla Sena</h2>
+        <button onclick="gerarPalpite('duplasena', 6, 50)">Gerar Palpite</button>
+        <p class="palpite"></p>
+    </div>
+
+    <div id="timemania" class="loteria timemania">
+        <h2>Timemania</h2>
+        <button onclick="gerarPalpite('timemania', 7, 80)">Gerar Palpite</button>
+        <p class="palpite"></p>
+    </div>
+
+    <div id="diadesorte" class="loteria diadesorte">
+        <h2>Dia de Sorte</h2>
+        <button onclick="gerarPalpite('diadesorte', 7, 31)">Gerar Palpite</button>
+        <p class="palpite"></p>
+    </div>
+
+
+ <script>
+    function gerarPalpite(loteriaId, quantidade, maximo) {
+        let palpites = [];
+        while (palpites.length < quantidade) {
+            let numero = Math.floor(Math.random() * maximo) + 1;
+            if (!palpites.includes(numero)) {
+                palpites.push(numero);
+            }
+        }
+
+        palpites.sort((a, b) => a - b);
+        const palpitesFormatados = palpites.map(num => num < 10 ? `0${num}` : num);
+        const loteriaDiv = document.getElementById(loteriaId);
+        const palpitePara = loteriaDiv.querySelector('.palpite');
+        palpitePara.textContent = `Palpite: ${palpitesFormatados.join(', ')}`;
+
+             // Verifica se o botão Telegram já existe
+            if (!loteriaDiv.querySelector('.telegram-btn')) {
+                const telegramBtn = document.createElement('button');
+                telegramBtn.innerHTML = '<i class="fab fa-telegram-plane"></i> Vamos para o Telegram da Star Loterias?';
+                telegramBtn.classList.add('btn-telegram'); // Certifique-se de que esta classe está correta
+                telegramBtn.onclick = function() {
+                    window.open('https://t.me/YourStarLoteriasChannel', '_blank'); // Use window.open para abrir em uma nova aba
+                };
+                loteriaDiv.appendChild(telegramBtn);
+            }
+    }
+</script>
+    
+    </body>
+    </html>
